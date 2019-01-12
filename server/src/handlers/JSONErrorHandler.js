@@ -1,6 +1,7 @@
 import {
   DatabaseError,
-  UnauthorizedError
+  UnauthorizedError,
+  ResourceNotFoundError
 } from "../errors"
 
 export const onError = async (err, req, res) => {
@@ -26,7 +27,15 @@ export const onError = async (err, req, res) => {
   switch (err.constructor) {
     case UnauthorizedError: {
       respondAndLog(401, {
-        type: "unauthorized_access",
+        type:    "unauthorized_access",
+        message: err.message
+      })
+      break
+    }
+
+    case ResourceNotFoundError: {
+      respondAndLog(404, {
+        type:    "resource_not_found",
         message: err.message
       })
       break
@@ -34,7 +43,7 @@ export const onError = async (err, req, res) => {
 
     case DatabaseError: {
       respondAndLog(500, {
-        type: "database_error",
+        type:    "database_error",
         message: err.message
       })
       break
@@ -43,7 +52,7 @@ export const onError = async (err, req, res) => {
     default: {
       console.warn(`Did not recognize ${err.constructor.name}.`)
       respondAndLog(500, {
-        type: "unknown_error",
+        type:    "unknown_error",
         message: err.message
       })
       break

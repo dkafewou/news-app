@@ -1,0 +1,41 @@
+[
+  {
+    "source": {
+      "id": "crypto-coins-news",
+      "name": "Crypto Coins News"
+    },
+    "author": null,
+    "title": "Robinhood Makes Hiring Efforts Ahead of UK Expansion",
+    "description": "According to a report by Techcrunch, Robinhood, the zero fee trading company based in the United States, is making plans to open an office in London and it has started recruiting to that effect. Various sources in and within London’s FinTech market have confi…",
+    "url": "https://www.ccn.com/robinhood-makes-hiring-efforts-ahead-of-uk-expansion/",
+    "urlToImage": "https://www.ccn.com/wp-content/uploads/2016/10/Big-Ben-in-London.jpg",
+    "publishedAt": "2019-01-12T07:12:25Z",
+    "content": "According to a report by Techcrunch, Robinhood, the zero fee trading company based in the United States, is making plans to open an office in London and it has started recruiting to that effect. Various sources in and within Londons FinTech market have confir… [+2942 chars]"
+  },
+  {
+    "source": {
+      "id": "hacker-news",
+      "name": "Hacker News"
+    },
+    "author": null,
+    "title": "Toronto man raises privacy concerns after car dealership employee turns off his dashcams — twice | CBC News",
+    "description": "A Toronto man is warning others to safeguard their privacy after his dashboard video cameras were turned off twice while a dealership was working on his vehicle.",
+    "url": "https://www.cbc.ca/news/canada/toronto/toronto-man-raises-privacy-concerns-after-car-dealership-employee-turns-off-his-dashcams-twice-1.4973924",
+    "urlToImage": "https://i.cbc.ca/1.4973942.1547160014!/fileImage/httpImage/image.jpeg_gen/derivatives/16x9_620/haider-firas-24.jpeg",
+    "publishedAt": "2019-01-12T03:08:00.0024451Z",
+    "content": "A Toronto man is warning others to safeguard their privacy after his dashboard video cameras were turned off twice while work at a dealership was being done on his vehicle. Haider Firas, 24, took his car to Parkview BMW in November. One camera in the car poin… [+3894 chars]"
+  },
+  {
+    "source": {
+      "id": "hacker-news",
+      "name": "Hacker News"
+    },
+    "author": "Timothy B. Lee",
+    "title": "Man says CES lidar’s laser was so powerful it wrecked his $1,998 camera",
+    "description": "Power rules ensure lasers are safe for human eyes—but not necessarily for cameras.",
+    "url": "https://arstechnica.com/cars/2019/01/man-says-ces-lidars-laser-was-so-powerful-it-wrecked-his-1998-camera/",
+    "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2019/01/DSC06882-760x380.jpg",
+    "publishedAt": "2019-01-12T02:53:15.5056238Z",
+    "content": "148 with 86 posters participating A man attending this week's CES show in Las Vegas says that a lidar sensor from startup AEye has permanently damaged the sensor on his $1,998 Sony camera. Earlier this week, roboticist and entrepreneur Jit Ray Chowdhury snapp… [+6654 chars]"
+  }
+]

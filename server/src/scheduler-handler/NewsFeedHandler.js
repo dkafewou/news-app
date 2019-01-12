@@ -12,12 +12,12 @@ export default class NewsFeedHandler extends ScheduleHandler {
       return
     }
 
-    for (source of sources) {
-      Article.fetchAll(source).then(articles => {
+    for (const source of sources) {
+      Article.fetchAll(source.id).then(articles => {
         socket.emit("NewsFeed", articles)
-        this.logSuccess(`Fetched news feed from ${source} and update feed`)
+        this.logSuccess(`Fetched news feed from ${source.name} and update feed`)
       }).catch(err => {
-        this.logError(`Failed to fetch news feed from ${source}`, err)
+        this.logError(`Failed to fetch news feed from ${source.name}`, err)
       })
     }
   }

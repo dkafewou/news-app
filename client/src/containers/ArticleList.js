@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { fetchArticles } from "../actions/articles"
+import { fetchArticles, updateNewsFeed } from "../actions/articles"
 import { bindActionCreators } from "redux"
 import ArticleList from "../components/ArticleList"
 
@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ fetchArticles }, dispatch)
+  actions: bindActionCreators({ fetchArticles, updateNewsFeed }, dispatch)
 })
 
 export default connect(

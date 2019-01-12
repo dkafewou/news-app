@@ -20,7 +20,6 @@ const onGet = async (req, res, next) => {
       }
       return `${acc},${source.id}`
     }, "")
-    console.log(articleSources)
 
     // Fetch all articles
     const articles = await Article.fetchAll(articleSources)

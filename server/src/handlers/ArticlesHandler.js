@@ -9,7 +9,7 @@ const onGet = async (req, res, next) => {
     // fetch sources information
     const sources = await Source.fetchAll(category, language)
     if (sources.length === 0) {
-      next(new ResourceNotFoundError("Not information source available"))
+      next(new ResourceNotFoundError("No information source available"))
       return
     }
 

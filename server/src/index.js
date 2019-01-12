@@ -6,6 +6,7 @@ import v1 from "./routes/v1"
 import { UnauthorizedError } from "./errors"
 import { onError } from "./handlers/JSONErrorHandler"
 import Config from "./helpers/Config"
+import ServerScheduler from "./server-scheduler"
 
 const PORT = Config.shared.requireProduction("PORT", "8080")
 const CORS_HOST = Config.shared.requireProduction("CORS_HOST", "http://localhost:9090")
@@ -36,6 +37,14 @@ app.use(onError)
 
 const server = http.createServer(app)
 const io = socketIO(server)
+
+io.on("connection", socket => {
+  console.log("New client connected")
+
+  ServerScheduler.serve(socket).catch(err => console.log(`Something went wrong ${err}`))
+
+  socket.on("disconnect", () => console.log("Client disconnected"));
+});
 
 // Listen and serve
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}`))

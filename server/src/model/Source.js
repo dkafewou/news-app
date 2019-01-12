@@ -5,7 +5,7 @@ const DEFAULT_CATEGORY = "technology"
 const DEFAULT_LANGUAGE = "en"
 
 export default class Source {
-  constructor({ rows }) {
+  constructor(rows) {
     Object.assign(this, rows)
   }
 

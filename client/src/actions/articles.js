@@ -18,3 +18,11 @@ export const rejectFetchArticles = (error) => ({
   status: "failure",
   error
 })
+
+/**
+ *  Update news feed with data from socket
+ **/
+export const updateNewsFeed = (articles) => ({
+  type: types.UPDATE_NEWS_FEED,
+  articles
+})

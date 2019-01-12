@@ -5,7 +5,7 @@ import {
 } from "../actions/articles"
 import API from "../api/index"
 import {
-  FETCH_ARTICLES
+  FETCH_ARTICLES, UPDATE_NEWS_FEED
 } from "../constants/ActionTypes"
 
 const initialState = {
@@ -16,6 +16,22 @@ const initialState = {
 
 export default function articles(state = initialState, action) {
   switch (action.type) {
+    case UPDATE_NEWS_FEED: {
+      const { articles } = action
+      if (state.articles.length < articles.length) {
+        return Object.assign({}, state, {
+          articles: action.articles
+        })
+      }
+
+      const partArticles = state.articles.slice(0, (state.articles.length - articles.length))
+      const fullArticles = articles.concat(partArticles)
+
+      return Object.assign({}, state, {
+        articles: fullArticles
+      })
+    }
+
     case FETCH_ARTICLES: {
       const { status } = action
       // Check status

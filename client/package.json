@@ -1,0 +1,78 @@
+{
+  "name": "client",
+  "description": "Application that can get you news from around the world.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Desire",
+    "email": "dafewou@gmail.com"
+  },
+  "babel": {
+    "presets": [
+      "stage-3",
+      "react",
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "> 1%"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "lodash",
+      "transform-runtime"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "install": "^0.12.2",
+    "npm": "^6.4.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-switch": "^3.0.4",
+    "reactstrap": "^6.5.0",
+    "redux": "^4.0.0",
+    "redux-little-router": "^15.1.2",
+    "redux-loop": "^4.4.1",
+    "whatwg-fetch": "^3.0.0",
+    "socket.io-client": "^2.2.0",
+    "moment": "^2.23.0"
+  },
+  "scripts": {
+    "watch-dev": "webpack-dev-server --mode development --port 9090 --hot --history-api-fallback",
+    "build": "webpack --mode production",
+    "test": "jest --detectOpenHandles"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "faker": "^4.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "puppeteer": "^1.10.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

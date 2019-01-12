@@ -4,7 +4,7 @@ import styles from "./ArticlesPage.less"
 
 const ArticlesPage = () => (
   <div className={styles["articles-page"]}>
-    <h1 className="text-center page-title">Live News Feed</h1>
+    <h1 className="text-center">Live News Feed</h1>
     <ArticlesList/>
   </div>
 )

@@ -15,11 +15,15 @@ const onGet = async (req, res, next) => {
 
     // Reduce sources to one string text for fetching articles
     const articleSources = sources.reduce((acc, source) => {
+      if (acc === "") {
+        return source.id
+      }
       return `${acc},${source.id}`
     }, "")
+    console.log(articleSources)
 
     // Fetch all articles
-    const articles = await Article.fetchAll(articleSources, category, language)
+    const articles = await Article.fetchAll(articleSources)
 
     // Response
     return res.json({

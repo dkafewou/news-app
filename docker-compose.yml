@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  server:
+    build: ./server
+    expose:
+      - "8080"
+    env_file:
+      - ./server/server.env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server/src:/home/news-app/server/src
+    command: npm start
+  client:
+    build: ./client
+    expose:
+      - "9090"
+    env_file:
+      - ./client/client.env
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./client/src:/home/news-app/client/src
+      - ./client/templates:/home/news-app/client/templates
+      - ./client/assets:/home/news-app/client/assets
+    command: npm run watch-dev
